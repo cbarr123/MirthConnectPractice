@@ -1,0 +1,181 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red133\green35\blue2;
+\red52\green52\blue52;\red52\green52\blue52;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c60000\c20000\c0;
+\cssrgb\c26667\c26667\c26667;\cssrgb\c26667\c26667\c26667;}
+\margl1440\margr1440\vieww10800\viewh14800\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs20 \cf2 \cb3 \expnd0\expndtw0\kerning0
+var hl7V2Array = [];
+\f1\b0 \uc0\u8232 
+\f0\b var hl7V2Obj = \{\};\uc0\u8232 hl7V2Obj.messageHeader =\{\};
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.fieldSeparator = msg[\'91MSH\'92][\'91MSH.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.encodingCharacter=msg[\'91MSH\'92][\'91MSH.2\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.sendingApplication=msg[\'91MSH\'92][\'91MSH.3\'92][\'91MSH.3.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.sendingFacility=msg[\'91MSH\'92][\'91MSH.4\'92][\'91MSH.4.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.receivingApplication=msg[\'91MSH\'92][\'91MSH.5\'92][\'91MSH.5.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.receivingFacility=msg[\'91MSH\'92][\'91MSH.6\'92][\'91MSH.6.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.dateTimeMessage=msg[\'91MSH\'92][\'91MSH.7\'92][\'91MSH.7.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.security=msg[\'91MSH\'92][\'91MSH.8\'92][\'91MSH.8.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.messageType=msg[\'91MSH\'92][\'91MSH.9\'92][\'91MSH.9.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.eventType=msg[\'91MSH\'92][\'91MSH.9\'92][\'91MSH.9.2\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.controlID=msg[\'91MSH\'92][\'91MSH.10\'92][\'91MSH.10.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.processingID=msg[\'91MSH\'92][\'91MSH.11\'92][\'91MSH.11.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.versionID=msg[\'91MSH\'92][\'91MSH.12\'92][\'91MSH.12.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.messageHeader.sequenceNumber=msg[\'91MSH\'92][\'91MSH.13\'92][\'91MSH.13.1\'92]
+\f1\b0 \
+
+\f0\b hl7V2Obj.patientIdentification =\{\};
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.setId=msg[\'91PID\'92][\'91PID.1\'92][\'91PID.1.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.patientIdExternal=msg[\'91PID\'92][\'91PID.2\'92][\'91PID.2.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.patientIdInternal=msg[\'91PID\'92][\'91PID.3\'92][\'91PID.3.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.alternateId=msg[\'91PID\'92][\'91PID.4\'92][\'91PID.4.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.patientName=\{\};
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.patientName.familyName=msg[\'91PID\'92][\'91PID.5\'92][\'91PID.5.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.patientName.givenName=msg[\'91PID\'92][\'91PID.5\'92][\'91PID.5.2\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.motherName=msg[\'91PID\'92][\'91PID.6\'92][\'91PID.6.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.dateTimeBirth=msg[\'91PID\'92][\'91PID.7\'92][\'91PID.7.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.sex=msg[\'91PID\'92][\'91PID.8\'92][\'91PID.8.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.patientAlias=msg[\'91PID\'92][\'91PID.9\'92][\'91PID.9.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.race=msg[\'91PID\'92][\'91PID.10\'92][\'91PID.10.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.patientAddress=msg[\'91PID\'92][\'91PID.11\'92][\'91PID.11.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.countryCode=msg[\'91PID\'92][\'91PID.12\'92][\'91PID.12.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.phoneHome=msg[\'91PID\'92][\'91PID.13\'92][\'91PID.13.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.phoneBusiness=msg[\'91PID\'92][\'91PID.14\'92][\'91PID.14.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.primaryLanguage=msg[\'91PID\'92][\'91PID.15\'92][\'91PID.15.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.maritalStatus=msg[\'91PID\'92][\'91PID.16\'92][\'91PID.16.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.religion=msg[\'91PID\'92][\'91PID.17\'92][\'91PID.17.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.accountNumber=msg[\'91PID\'92][\'91PID.18\'92][\'91PID.18.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.ssnNumber=msg[\'91PID\'92][\'91PID.19\'92][\'91PID.19.1\'92]
+\f1\b0 \uc0\u8232 
+\f0\b hl7V2Obj.patientIdentification.driverLicense=msg[\'91PID\'92][\'91PID.20\'92][\'91PID.20.1\'92]
+\f1\b0 \
+
+\f0\b hl7V2Array.push(hl7V2Obj);
+\f1\b0 \
+
+\f0\b var output = JSON.stringify(hl7V2Array);
+\f1\b0 \uc0\u8232 
+\f0\b logger.info(output);
+\f1\b0 \uc0\u8232 
+\f0\b channelMap.put(\'91JSON\'92,output);
+\f1\b0 \
+\
+\
+var hl7V2Array = [];\
+var hl7V2Obj = \{\};\
+hl7V2Obj.messageHeader = \{\};\
+//\
+//\
+//\
+hl7V2Array.push(hl7V2Obj);\
+var output = JSON.stringify(hl7V2Array);\
+logger.info(output);\
+channelMap.put('JSON',output)\
+\
+http://wiki.galenhealthcare.com/Category:Webcasts\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf2 \cb3 \outl0\strokewidth0 \strokec4 MSH|^~\\&|CERNER||PriorityHealth||||ORU^R01|Q479004375T431430612|P|2.3|\strokec6 \
+\strokec4 PID|||001677980||SMITH^CARL||19680219|M||||||||||929645156318|123456789|\strokec6 \
+\strokec4 PD1||||1234567890^LAST^FIRST^M^^^^^NPI|
+\fs20 \cf2 \cb3 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f2\fs24 \cf2 \cb3 \outl0\strokewidth0 \strokec2 MSH|^~\\&|EPICADT|DH|LABADT|DH|201301011226||ADT^A01|HL7MSG00001|P|2.3|\
+EVN|A01|201301011223||\
+PID|||MRN12345^5^M11||APPLESEED^JOHN^A^III||19710101|M||C|1^DATICA STREET^^MADISON^WI^53005-1020|GL|(414)379-1212|(414)271-3434||S||MRN12345001^2^M10|123456789|987654^NC|\
+NK1|1|APPLESEED^BARBARA^J|WIFE||||||NK^NEXT OF KIN\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 [\{\strokec6 \
+\strokec4 \'93messageHeader\'94: \{\strokec6 \
+\strokec4 \'93fieldSeparator\'94: \'93|\'94,\strokec6 \
+\strokec4 \'93encodingCharacter\'94: \'93^~\\\\&\'94,\strokec6 \
+\strokec4 \'93sendingApplication\'94: \'93CERNER\'94,\strokec6 \
+\strokec4 \'93sendingFacility\'94: \'93\'94,\strokec6 \
+\strokec4 \'93receivingApplication\'94: \'93PriorityHealth\'94,\strokec6 \
+\strokec4 \'93receivingFacility\'94: \'93\'94,\strokec6 \
+\strokec4 \'93dateTimeMessage\'94: \'93\'94,\strokec6 \
+\strokec4 \'93security\'94: \'93\'94,\strokec6 \
+\strokec4 \'93messageType\'94: \'93ORU\'94,\strokec6 \
+\strokec4 \'93eventType\'94: \'93R01\'94,\strokec6 \
+\strokec4 \'93controlID\'94: \'93Q479004375T431430612\'94,\strokec6 \
+\strokec4 \'93processingID\'94: \'93P\'94,\strokec6 \
+\strokec4 \'93versionID\'94: \'932.3\'94,\strokec6 \
+\strokec4 \'93sequenceNumber\'94: \'93\'94\strokec6 \
+\strokec4 \},\strokec6 \
+\strokec4 \'93patientIdentification\'94: \{\strokec6 \
+\strokec4 \'93setId\'94: \'93\'94,\strokec6 \
+\strokec4 \'93patientIdExternal\'94: \'93\'94,\strokec6 \
+\strokec4 \'93patientIdInternal\'94: \'93001677980\'94,\strokec6 \
+\strokec4 \'93alternateId\'94: \'93\'94,\strokec6 \
+\strokec4 \'93patientName\'94: \{\strokec6 \
+\strokec4 \'93familyName\'94: \'93SMITH\'94,\strokec6 \
+\strokec4 \'93givenName\'94: \'93CURTIS\'94\strokec6 \
+\strokec4 \},\strokec6 \
+\strokec4 \'93motherName\'94: \'93\'94,\strokec6 \
+\strokec4 \'93dateTimeBirth\'94: \'9319680219\'94,\strokec6 \
+\strokec4 \'93sex\'94: \'93M\'94,\strokec6 \
+\strokec4 \'93patientAlias\'94: \'93\'94,\strokec6 \
+\strokec4 \'93race\'94: \'93\'94,\strokec6 \
+\strokec4 \'93patientAddress\'94: \'93\'94,\strokec6 \
+\strokec4 \'93countryCode\'94: \'93\'94,\strokec6 \
+\strokec4 \'93phoneHome\'94: \'93\'94,\strokec6 \
+\strokec4 \'93phoneBusiness\'94: \'93\'94,\strokec6 \
+\strokec4 \'93primaryLanguage\'94: \'93\'94,\strokec6 \
+\strokec4 \'93maritalStatus\'94: \'93\'94,\strokec6 \
+\strokec4 \'93religion\'94: \'93\'94,\strokec6 \
+\strokec4 \'93accountNumber\'94: \'93929645156318\'94,\strokec6 \
+\strokec4 \'93ssnNumber\'94: \'93123456789\'94,\strokec6 \
+\strokec4 \'93driverLicense\'94: \'93\'94\strokec6 \
+\strokec4 \}\strokec6 \
+\strokec4 \}]
+\f1\fs20 \cf2 \cb3 \outl0\strokewidth0 \
+}
